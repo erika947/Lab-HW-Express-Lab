@@ -1,8 +1,7 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3003;
 
-// const animals = ['White Tiger', 'Sea lion', ' Fennec Fox','Humming Bird', 'Red Panda','Bunny','Penguin', 'Arctic Wolf'];
 
 app.set('view engine' , 'ejs')
 
@@ -23,6 +22,7 @@ app.get('/white-tiger', (req, res) => {
 
 app.get('/sea-lion', (req, res) => {
     res.send(`<h1>Sea Lion</h1>
+    
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/California_sea_lion_in_La_Jolla_(70568).jpg/1200px-California_sea_lion_in_La_Jolla_(70568).jpg">`);
   });
 
@@ -56,15 +56,7 @@ app.get('/sea-lion', (req, res) => {
     <img src="https://wallpapercave.com/wp/VqiBSJG.jpg">This is the starting page`);
   });
 
- 
-
- 
-
-
-// app.get('/:indexOfAnimalsArray', (req, res) => {
-//     res.send(animals[req.params.indexOfAnimalsArray]);
-// });
-
 app.listen(port,() => {
-    console.log('listening on port' , port);
-});
+  console.log('i am listening on port ', port)
+})
+
