@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="design.css" />
+</head>
+<body>
+    <style>
+        body{
+    background: #69a5ff;
+    font-family: tahoma;
+    color: #fee9e9;
+    padding: 30px;
+}
+        h1{
+            font-size: 48px; text-transform: uppercase; letter-spacing:  2px;
+            text-align: center;
+        }
+        h2{
+            font-size: 30px; text-transform: uppercase; letter-spacing:  2px;
+            text-align: center;
+        }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+        }
+        .contain{
+            justify-content: center;
+            align-items: center;
+    
+        }
+        .banner{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        li{
+            float: left;
+            display: block;
+            color: #fee9e9;
+            text-align: right;
+            padding: 16px;
+            text-decoration: none;
+            font-size: 30px;
+            font-family: tahoma;
+        }
+    </style>
+    <h1>welcome to the profile of <%= animals%></h1>
+    <img class = "banner" src="https://openclipart.org/image/800px/327537">
+    <h2>Animals can be many things. They can be</h2>
+    <ul class = 'contain' >
+        <% data.list.forEach(function(item){ %>
+            <li><%= item %></li>
+
+    <%}) %>
+    </ul>
+    <h2><a href="/images/:animal_pics">CLICK HERE LIST</a></h2>
+</body>
+</html>

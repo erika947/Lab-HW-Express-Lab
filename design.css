@@ -1,0 +1,42 @@
+body{
+    background: #69a5ff;
+    font-family: tahoma;
+    color: #fee9e9;
+    padding: 30px;
+}
+        h1{
+            font-size: 48px; text-transform: uppercase; letter-spacing:  2px;
+            text-align: center;
+        }
+        h2{
+            font-size: 30px; text-transform: uppercase; letter-spacing:  2px;
+            text-align: center;
+        }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+        }
+        .contain{
+            justify-content: center;
+            align-items: center;
+    
+        }
+        .banner{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        li{
+            float: left;
+            display: block;
+            color: #fee9e9;
+            text-align: right;
+            padding: 16px;
+            text-decoration: none;
+            font-size: 30px;
+            font-family: tahoma;
+        }
